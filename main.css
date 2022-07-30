@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+#descInput {
+  width: 500px;
+}

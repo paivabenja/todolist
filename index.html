@@ -5,16 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tudulist</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>tudulist</h1>
     <div class="container">
+      <h1>tudulist</h1>
       <table id="table">
-        <tr class="title">
-          <th><input type="text" placeholder="Todo name" id="input" /></th>
-          <th><button id="add">add</button></th>
+        <tr class="title" id="title">
+          <td>
+            <input type="text" placeholder="Todo title" id="titleInput" />
+          </td>
+          <td>
+            <input type="text" placeholder="Todo description" id="descInput" />
+          </td>
+          <td>
+            <button id="add">add</button>
+          </td>
+          <td>
+            <p>done</p>
+          </td>
         </tr>
       </table>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>
