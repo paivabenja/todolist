@@ -12,12 +12,12 @@ const createTodo = () => {
   let descripcion = row.insertCell();
   let remove = row.insertCell();
   let checkbox = row.insertCell();
-  let buttonCreation = "<button class='remove' id='";
-  remove.innerHTML = buttonCreation.concat(
-    "btn",
+
+  remove.innerHTML = "<button class='remove' id='btn".concat(
     removeIds,
     "'>remove</button>"
   );
+
   checkbox.innerHTML = '<input type="checkbox" />';
   descripcion.innerHTML = descInput.value;
   titulo.innerHTML = titleInput.value;
