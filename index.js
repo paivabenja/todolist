@@ -1,3 +1,10 @@
+const removeTodo = (id) => {
+  let btn = document.getElementById("btn".concat(id));
+  btn.addEventListener("click", () => {
+    document.getElementById("row".concat(id)).remove();
+  });
+};
+
 const createTodo = () => {
   let row = table.insertRow();
   row.id = "row".concat(removeIds);
@@ -6,16 +13,15 @@ const createTodo = () => {
   let remove = row.insertCell();
   let checkbox = row.insertCell();
   let buttonCreation = "<button class='remove' id='";
-  remove.innerHTML = buttonCreation.concat(removeIds, "'>remove</button>");
+  remove.innerHTML = buttonCreation.concat(
+    "btn",
+    removeIds,
+    "'>remove</button>"
+  );
   checkbox.innerHTML = '<input type="checkbox" />';
   descripcion.innerHTML = descInput.value;
   titulo.innerHTML = titleInput.value;
-  let button = [];
-  button[removeIds] = document.getElementById(removeIds);
-  button[removeIds].addEventListener("click", () => {
-    let parent = document.getElementById("row".concat(removeIds - 1));
-    parent.remove();
-  });
+  removeTodo(removeIds);
 
   removeIds += 1;
 };
